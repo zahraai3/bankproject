@@ -1,5 +1,5 @@
 class Transfer:
-    @staticmethod
+    @staticmethod #نضيفه حته نكوللهم ان هالكلاس مانستخدمه حته ننشا منه كاىنات وانما لاستخدام منفصل 
     def exc(users):
        user_name = input("Enter your bank account name : ")
 
