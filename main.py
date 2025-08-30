@@ -11,24 +11,24 @@ class BankAcc:
 
 #main class to control all the actions :)
 class AllBankWork:
-    user1 = BankAcc('zoy',1,2000)
-    user2 = BankAcc('rafal',2,3000)
-    user3 = BankAcc('tabarak',3,2000)
+    user1 = BankAcc('zoy',1,82000)
+    user2 = BankAcc('rafal',2,73000)
+    user3 = BankAcc('tabarak',3,92000)
 
     users =[user1,user2,user3]
 
     def operates(method):
         if method == 'deposit':
             Deposit.exc(AllBankWork.users)
-        elif method == 'withdraw':
+        elif method == 'withdrawal':
             Withdrawal.exc(AllBankWork.users)
         elif method == 'transfer' :
             Transfer.exc(AllBankWork.users)
 
 
 
-themwthode = input("Choose an action (withdraw,deposit,transfer):  ").lower()
-actions = ['withdraw','deposit','transfer']
+themwthode = input("Choose an action (withdrawal,deposit,transfer):  ").lower()
+actions = ['withdrawal','deposit','transfer']
 
 # a loop for the situation where the users wants to be funny and write wrong actions :|
 while themwthode not in actions:
