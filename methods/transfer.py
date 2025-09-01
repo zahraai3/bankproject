@@ -31,7 +31,7 @@ class Transfer:
            else :
                user_account.total -= money
                second_user_account.total += money
-               print(f"A total of {money} $ had been transfered from {user_name.upper()} to {second_user_name.upper()},your new balance is: {user_account.total} $")
+               print(f"A total of ${money} had been transfered from {user_name.upper()} to {second_user_name.upper()},your new balance is: ${user_account.total}")
            
            
            
