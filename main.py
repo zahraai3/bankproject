@@ -22,11 +22,17 @@ class AllBankWork:
             Deposit.exc(AllBankWork.users)
         elif method == 'withdrawal':
             Withdrawal.exc(AllBankWork.users)
+            Withdrawal.restart(AllBankWork.users)
         elif method == 'transfer' :
             Transfer.exc(AllBankWork.users)
+            Transfer.restart(AllBankWork.users)
 
 
 
+print("****** NeoFuture Bank  ****** 🏛️")
+
+
+print("Welcome to our bank! What service do you need today?")
 themwthode = input("Choose an action (withdrawal,deposit,transfer):  ").lower()
 actions = ['withdrawal','deposit','transfer']
 
