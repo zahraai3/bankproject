@@ -24,7 +24,7 @@ class Transfer:
        if second_user_account == None:
            print("Account is not found,try again")
        else :
-           money_amount = int(input("Enter the amount u want to deposite : "))
+           money_amount = int(input("Enter the amount u want to transfer : "))
            money = money_amount
 
            if money > user_account.total :
@@ -44,6 +44,7 @@ class Transfer:
        Transfer.exc(users)
       elif done == "false":
        print ("Thank you for banking with us! Have a great day")
+       break
       else:
        print ("Wrong input, Enter True or False")
 
