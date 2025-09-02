@@ -18,6 +18,7 @@ class Withdrawal:
          print (f"You have withdrawn this ${amount}, and this amount remains in your account ${i.total}")
 
        else:
+        print("")
         print (Fore.MAGENTA+f"Sorry {i.name}, The amount you requested ${amount} is more than the money you have in your account ${i.total}"+Style.RESET_ALL)
      else:
        print("Account is not found,try again")
@@ -31,8 +32,10 @@ class Withdrawal:
 
       done = input("Would you like to make another withdrawal?(True, False): ").lower()
       if done == "true":
+       print("")
        Withdrawal.exc(users)
       elif done == "false":
+       print("")
        print (Fore.MAGENTA+Back.WHITE+"Thank you for banking with us! Have a great day."+Style.RESET_ALL)
        break
       else:

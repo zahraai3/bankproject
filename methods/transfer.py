@@ -39,6 +39,7 @@ class Transfer:
            else :
                user_account.total -= money
                second_user_account.total += money
+               print("")
                print(Fore.MAGENTA+f"A total of ${money} had been transfered from {user_name.upper()} to {second_user_name.upper()},your new balance is: ${user_account.total}"+Style.RESET_ALL)
                
     @staticmethod
@@ -48,9 +49,10 @@ class Transfer:
 
       done = input("Would you like to make another Transfer?(True, False): ").lower()
       if done == "true":
+       print("")
        Transfer.exc(users)
       elif done == "false":
-
+       print("")
        print (Fore.MAGENTA+Back.WHITE+"Thank you for banking with us! Have a great day."+Style.RESET_ALL)
        break
       else:

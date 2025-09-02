@@ -35,7 +35,8 @@ class AllBankWork:
 
 
 
-print(Fore.CYAN+Back.WHITE +"        NeoFuture Bank 🏛️       " + Style.RESET_ALL)
+print(Fore.CYAN+Back.WHITE +"    🏛️  NeoFuture Bank 🏛️     " + Style.RESET_ALL)
+print("")
 
 print(Fore.CYAN+"Welcome to our bank! What service do you need today?"+Style.RESET_ALL)
 themwthode = input("Choose an action (withdrawal,deposit,transfer):  ").lower()

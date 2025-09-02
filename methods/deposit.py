@@ -16,6 +16,7 @@ class Deposit:
     for i in users :
       if i.name == user_name :
         i.total += money_amount
+        print("")
         print(Fore.MAGENTA+f"deposit successful! 💰 you deposited ${money_amount} and your new balance is ${i.total} "+Style.RESET_ALL)
         found = True
         break
@@ -31,8 +32,10 @@ class Deposit:
 
       done = input("Would you like to make another deposit ?(True, False): ").lower()
       if done == "true":
+       print("")
        Deposit.exc(users)
       elif done == "false":
+       print("")
        print (Fore.MAGENTA+Back.WHITE+"Thank you for banking with us! Have a great day."+Style.RESET_ALL)
        break
       else:
