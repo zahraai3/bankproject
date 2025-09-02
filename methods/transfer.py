@@ -39,14 +39,13 @@ class Transfer:
            else :
                user_account.total -= money
                second_user_account.total += money
-               print("")
                print(Fore.MAGENTA+f"A total of ${money} had been transfered from {user_name.upper()} to {second_user_name.upper()},your new balance is: ${user_account.total}"+Style.RESET_ALL)
                
     @staticmethod
     def restart(users):
      
      while True:
-
+      print("")
       done = input("Would you like to make another Transfer?(True, False): ").lower()
       if done == "true":
        print("")
