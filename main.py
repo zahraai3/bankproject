@@ -1,9 +1,9 @@
 from methods.withdrawal import Withdrawal
 from methods.deposit import Deposit
 from methods.transfer import Transfer
-
-
-
+#coloring the terminal output :)
+from colorama import Fore,init,Back,Style
+init()
 
 
 #class to create users with the same properties
@@ -35,9 +35,9 @@ class AllBankWork:
 
 
 
-print("****** NeoFuture Bank ****** 🏛️")
+print(Fore.CYAN+Back.WHITE +"        NeoFuture Bank 🏛️       " + Style.RESET_ALL)
 
-print("Welcome to our bank! What service do you need today?")
+print(Fore.CYAN+"Welcome to our bank! What service do you need today?"+Style.RESET_ALL)
 themwthode = input("Choose an action (withdrawal,deposit,transfer):  ").lower()
 actions = ['withdrawal','deposit','transfer']
 

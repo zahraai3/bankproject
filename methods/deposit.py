@@ -1,9 +1,13 @@
+#coloring the terminal output :)
+from colorama import Fore,init,Back,Style
+init()
+
 
 class Deposit:
   @staticmethod
 
   def exc(users):
-    print("Alright!, you’re here to make a deposit 💰 ")
+    print(Fore.BLUE+"Alright!, you’re here to make a deposit 💰 "+Style.RESET_ALL)
     user_name = input(" Enter your bank account name : ").lower()
     money_amount = int(input(" Enter the deposit ammount, please : "))
 
@@ -12,7 +16,7 @@ class Deposit:
     for i in users :
       if i.name == user_name :
         i.total += money_amount
-        print(f"deposit successful! 💰 you deposited ${money_amount} and your new balance is ${i.total} ")
+        print(Fore.MAGENTA+f"deposit successful! 💰 you deposited ${money_amount} and your new balance is ${i.total} "+Style.RESET_ALL)
         found = True
         break
     if not found:
@@ -29,7 +33,7 @@ class Deposit:
       if done == "true":
        Deposit.exc(users)
       elif done == "false":
-       print ("Thank you for banking with us! Have a great day.")
+       print (Fore.MAGENTA+Back.WHITE+"Thank you for banking with us! Have a great day."+Style.RESET_ALL)
        break
       else:
        print ("Wrong input, Enter True or False ")
