@@ -27,6 +27,7 @@ class Withdrawal:
        Withdrawal.exc(users)
       elif done == "false":
        print ("Thank you for banking with us! Have a great day")
+       break
       else:
        print ("Wrong input, Enter True or False")
       
