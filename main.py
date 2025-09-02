@@ -20,6 +20,7 @@ class AllBankWork:
     def operates(method):
         if method == 'deposit':
             Deposit.exc(AllBankWork.users)
+            Deposit.restart(AllBankWork.users)
         elif method == 'withdrawal':
             Withdrawal.exc(AllBankWork.users)
             Withdrawal.restart(AllBankWork.users)
@@ -29,14 +30,14 @@ class AllBankWork:
 
 
 
-print("****** NeoFuture Bank  ****** 🏛️")
+print("****** NeoFuture Bank ****** 🏛️")
 
 
 print("Welcome to our bank! What service do you need today?")
 themwthode = input("Choose an action (withdrawal,deposit,transfer):  ").lower()
 actions = ['withdrawal','deposit','transfer']
 
-# a loop for the situation where the users wants to be funny and write wrong actions :|
+# a loop for the situation where the users want to be funny and write wrong actions :|
 while themwthode not in actions:
     themwthode = input("Invalid action, please Choose an action from (withdraw,deposit,transfer):  ").lower()
 AllBankWork.operates(themwthode)

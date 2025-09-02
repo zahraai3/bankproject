@@ -1,7 +1,7 @@
 class Withdrawal:
   @staticmethod
   def exc(users):
-   print("Alright, you’re here for a withdrawal 💵")
+   print("Alright, you’re here to make a withdrawal 💵")
    user_name = input("Enter your bank account name : ").lower()
    amount = int(input("Enter the amount you want to withdrawal:"))
 
@@ -26,7 +26,9 @@ class Withdrawal:
       if done == "true":
        Withdrawal.exc(users)
       elif done == "false":
+
        print ("Thank you for banking with us! Have a great day")
+
        break
       else:
        print ("Wrong input, Enter True or False")
