@@ -1,7 +1,10 @@
+
 class Transfer:
     @staticmethod #نضيفه حته نكوللهم ان هالكلاس مانستخدمه حته ننشا منه كاىنات وانما لاستخدام منفصل 
     def exc(users):
+
        print("Alright, you’re here to make a transfer 🔄")
+
        user_name = input("Enter your bank account name : ")
 
        user_account = None
@@ -32,7 +35,7 @@ class Transfer:
            else :
                user_account.total -= money
                second_user_account.total += money
-               print(f"A total of ${money} had been transfered from {user_name.upper()} to {second_user_name.upper()},your new balance is: ${user_account.total}")
+               print("A total of ${money} had been transfered from {user_name.upper()} to {second_user_name.upper()},your new balance is: ${user_account.total}")
                
     @staticmethod
     def restart(users):
@@ -43,7 +46,9 @@ class Transfer:
       if done == "true":
        Transfer.exc(users)
       elif done == "false":
+
        print ("Thank you for banking with us! Have a great day.")
+       break
       else:
        print ("Wrong input, Enter True or False")
 

@@ -2,6 +2,10 @@ from methods.withdrawal import Withdrawal
 from methods.deposit import Deposit
 from methods.transfer import Transfer
 
+
+
+
+
 #class to create users with the same properties
 class BankAcc:
     def __init__(self,name:str,id:int,total:int,):
@@ -30,8 +34,8 @@ class AllBankWork:
 
 
 
-print("****** NeoFuture Bank ****** 🏛️")
 
+print("****** NeoFuture Bank ****** 🏛️")
 
 print("Welcome to our bank! What service do you need today?")
 themwthode = input("Choose an action (withdrawal,deposit,transfer):  ").lower()
