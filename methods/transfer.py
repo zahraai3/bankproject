@@ -1,7 +1,10 @@
+from colorama import Fore,Style,init,Back
+init()
+
 class Transfer:
     @staticmethod #نضيفه حته نكوللهم ان هالكلاس مانستخدمه حته ننشا منه كاىنات وانما لاستخدام منفصل 
     def exc(users):
-       print("Alright, you’re here for a transfer 🔄")
+       print(Fore.CYAN +"Alright, you’re here for a transfer 🔄"+Style.RESET_ALL)
        user_name = input("Enter your bank account name : ")
 
        user_account = None
@@ -32,7 +35,7 @@ class Transfer:
            else :
                user_account.total -= money
                second_user_account.total += money
-               print(f"A total of ${money} had been transfered from {user_name.upper()} to {second_user_name.upper()},your new balance is: ${user_account.total}")
+               print(Fore.MAGENTA +f"A total of ${money} had been transfered from {user_name.upper()} to {second_user_name.upper()},your new balance is: ${user_account.total}"+Style.RESET_ALL)
                
     @staticmethod
     def restart(users):
@@ -43,7 +46,7 @@ class Transfer:
       if done == "true":
        Transfer.exc(users)
       elif done == "false":
-       print ("Thank you for banking with us! Have a great day")
+       print (Fore.MAGENTA+Back.WHITE+"Thank you for banking with us! Have a great day"+Style.RESET_ALL)
        break
       else:
        print ("Wrong input, Enter True or False")

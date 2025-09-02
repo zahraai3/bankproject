@@ -1,7 +1,10 @@
+from colorama import Fore,Style,init,Back
+init()
+
 class Withdrawal:
   @staticmethod
   def exc(users):
-   print("Alright, you’re here for a withdrawal 💵")
+   print(Fore.CYAN+"Alright, you’re here for a withdrawal 💵"+Style.RESET_ALL)
    user_name = input("Enter your bank account name : ").lower()
    amount = int(input("Enter the amount you want to withdraw:"))
 
@@ -9,8 +12,9 @@ class Withdrawal:
      if i.name.lower() == user_name.lower():
        if i.total>= amount:  
          i.total -= amount
-       print (f"You have withdrawn this ${amount}, and this amount remains in your account ${i.total}")
-
+       print (Fore.MAGENTA + f"You have withdrawn this ${amount}, and this amount remains in your account ${i.total}"+Style.RESET_ALL)
+ 
+     
 
   @staticmethod
   def restart(users):
@@ -22,7 +26,7 @@ class Withdrawal:
       if done == "true":
        Withdrawal.exc(users)
       elif done == "false":
-       print ("Thank you for banking with us! Have a great day")
+       print (Fore.MAGENTA+Back.WHITE +"Thank you for banking with us! Have a great day"+Style.RESET_ALL)
        break
       else:
        print ("Wrong input, Enter True or False")
