@@ -6,15 +6,17 @@ class Withdrawal:
   def exc(users):
    print(Fore.CYAN+"Alright, you’re here for a withdrawal 💵"+Style.RESET_ALL)
    user_name = input("Enter your bank account name : ").lower()
-   amount = int(input("Enter the amount you want to withdraw:"))
+   amount = int(input("Enter the amount you want to withdrawal:"))
 
    for i in users:
      if i.name.lower() == user_name.lower():
        if i.total>= amount:  
          i.total -= amount
-       print (Fore.MAGENTA + f"You have withdrawn this ${amount}, and this amount remains in your account ${i.total}"+Style.RESET_ALL)
- 
-     
+         print (f"You have withdrawn this ${amount}, and this amount remains in your account ${i.total}")
+
+       else:
+        print (f"Sorry {i.name}, The amount you requested ${amount} is more than the money you have in your account ${i.total}")
+       
 
   @staticmethod
   def restart(users):
@@ -30,6 +32,7 @@ class Withdrawal:
        break
       else:
        print ("Wrong input, Enter True or False")
+      
 
  
        
